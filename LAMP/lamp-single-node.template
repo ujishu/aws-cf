@@ -93,9 +93,8 @@
               "Install" : {
                   "packages" : {
                       "yum" : {
-                          "mysql"        : [],
-                          "mysql-server" : [],
-                          "mysql-libs"   : [],
+                          "mariadb"        : [],
+                          "mariadb-libs"   : [],
                           "httpd"        : [],
                           "php"          : [],
                           "php-mysql"    : []
@@ -185,7 +184,7 @@
         "InstanceType" : { "Ref" : "InstanceType" },
         "SecurityGroups" : [ { "Ref" : "WebServerSecurityGroup" } ],
         "KeyName" : { "Ref" : "KeyName" },
-        "ImageId" : "ami-c58c1dd3",
+        "ImageId" : "ami-077d109dee4cdf8cf",
 
         "UserData" : { "Fn::Base64" : { "Fn::Join" : ["", [
           "#!/bin/bash -xe\n",
